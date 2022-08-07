@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  scrollbar-width: none;
+}
+
+img {
+  display: inline-block;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav__link {
+  font-size: 1.5rem;
+  font-family: "Barlow", serif;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.header-primary {
+  color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  white-space: nowrap;
+}
+
+.header-secondary {
+  font-family: "Fraunces", serif;
+  color: hsl(212deg, 27%, 19%);
+  font-size: 5rem;
+  display: inline-block;
+  margin-block: 1.5rem;
+  word-wrap: break-word;
+  font-weight: 600;
+  white-space: break-spaces;
+}
+
+.header-tetiary {
+  font-size: 3rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.parag {
+  font-family: "Barlow", serif;
+  font-size: 1.8rem;
+  color: hsl(232deg, 10%, 55%);
+  margin-block: 2rem;
+  line-height: 1.6;
+}
+
+.text-box__link {
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+  z-index: 2000;
+  font-family: "Fraunces", serif;
+}
+.text-box__link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+  right: 0;
+  height: 10px;
+  width: 100%;
+  background-color: rgba(250, 212, 0, 0.5);
+  border-radius: 100px;
+}
+
+.client-header {
+  font-size: 2rem;
+  color: hsl(232deg, 10%, 55%);
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(30rem, 51.1rem));
+}
+.grid-section .text-box {
+  padding: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-section .img-box img {
+  width: 100%;
+  height: 100%;
+}
+.grid-section .graphic-img,
+.grid-section .photography-img {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline: 18rem;
+  padding-block-end: 2rem;
+}
+.grid-section .graphic-img {
+  background-image: url("../../images/desktop/image-graphic-design.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.grid-section .graphic-img .parag,
+.grid-section .graphic-img .header-tetiary {
+  color: hsl(167deg, 40%, 24%);
+}
+.grid-section .photography-img {
+  background-image: url("../../images/desktop/image-photography.jpg");
+}
+.grid-section .photography-img .parag,
+.grid-section .photography-img .header-tetiary {
+  color: hsl(198deg, 62%, 26%);
+}
+
+.header {
+  position: relative;
+  padding: 1.5rem 2rem;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  width: min(100%, 114rem);
+}
+.header__container .nav__items {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.header__container .nav__list:last-child {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 200px;
+  padding: 1rem 2rem;
+}
+.header__container .nav__list:last-child .nav__link {
+  color: hsl(212deg, 27%, 19%);
+}
+.header__container .logo {
+  display: flex;
+  align-items: center;
+}
+.header .down {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 39%;
+}
+.header .down-img {
+  display: flex;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.flex .item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+.flex .item .img {
+  width: 10rem;
+  height: 10rem;
+}
+.flex .item .img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.client-header {
+  margin-bottom: 6rem;
+}
+
+.header {
+  height: 80vh;
+  background-image: url("../../images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.grid-section {
+  width: 100%;
+}
+
+.testimonial-section {
+  padding: 15rem 21rem;
+}
+
+/*# sourceMappingURL=style.css.map */

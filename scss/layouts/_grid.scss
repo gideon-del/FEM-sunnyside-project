@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(30rem, 51.1rem));
+  .text-box {
+    padding: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-box {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .graphic-img,
+  .photography-img {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-inline: 18rem;
+    padding-block-end: 2rem;
+  }
+  .graphic-img {
+    background-image: url("../../images/desktop/image-graphic-design.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    .parag,
+    .header-tetiary {
+      color: $c-dark-desaturated-blue;
+    }
+  }
+  .photography-img {
+    background-image: url("../../images/desktop/image-photography.jpg");
+    .parag,
+    .header-tetiary {
+      color: $c-dark-blue;
+    }
+  }
+}

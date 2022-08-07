@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+.header {
+  position: relative;
+  padding: 1.5rem 2rem;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    width: min(100%, 114rem);
+    .nav {
+      &__items {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+      &__list {
+        &:last-child {
+          background-color: $c-white;
+          border-radius: 200px;
+          padding: 1rem 2rem;
+          .nav__link {
+            color: $c-vd-desaturated-blue;
+          }
+        }
+      }
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .down {
+    @include centerEl();
+    top: 39%;
+    &-img {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
