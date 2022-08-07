@@ -69,3 +69,16 @@
   text-transform: uppercase;
   letter-spacing: 10px;
 }
+h4 {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  line-height: 3.4rem;
+  text-align: center;
+  color: $c-d-grayish-blue;
+  span {
+    font-family: "Fraunces", sans-serif;
+    font-size: 2.5rem;
+    font-weight: $f-900;
+    color: $c-vd-desaturated-blue;
+  }
+}

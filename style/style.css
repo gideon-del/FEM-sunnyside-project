@@ -109,6 +109,20 @@ ul {
   letter-spacing: 10px;
 }
 
+h4 {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  line-height: 3.4rem;
+  text-align: center;
+  color: hsl(232deg, 10%, 55%);
+}
+h4 span {
+  font-family: "Fraunces", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+}
+
 .text-center {
   text-align: center;
 }
@@ -116,7 +130,7 @@ ul {
 .grid-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, minmax(30rem, 51.1rem));
+  grid-template-rows: repeat(3, minmax(30rem, 60.1rem));
 }
 .grid-section .text-box {
   padding: 15rem;
@@ -220,6 +234,20 @@ ul {
   margin-bottom: 6rem;
 }
 
+.gallery {
+  display: flex;
+  width: 100%;
+}
+.gallery .img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  width: 25%;
+}
+.gallery .img img {
+  width: 100%;
+}
+
 .header {
   height: 80vh;
   background-image: url("../../images/desktop/image-header.jpg");
@@ -234,7 +262,7 @@ ul {
 }
 
 .testimonial-section {
-  padding: 15rem 21rem;
+  padding: 15rem 12rem;
 }
 
 /*# sourceMappingURL=style.css.map */
