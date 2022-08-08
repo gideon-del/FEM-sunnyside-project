@@ -57,9 +57,19 @@
     right: 0;
     height: 10px;
     width: 100%;
-    background-color: rgba($c-yellow, 0.5);
+    background-color: rgba($c-yellow, 0.2);
     border-radius: 100px;
+    transition: background-color 0.2s ease-in;
   }
+  &:hover::after {
+    background-color: rgba($c-yellow, 1);
+  }
+}
+.pink::after {
+  background-color: rgba($c-soft-red, 0.2);
+}
+.pink:hover::after {
+  background-color: rgba($c-soft-red, 1);
 }
 .client-header {
   font-size: 2rem;
@@ -80,5 +90,13 @@ h4 {
     font-size: 2.5rem;
     font-weight: $f-900;
     color: $c-vd-desaturated-blue;
+  }
+}
+.footer__nav a {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  color: $c-dark-desaturated-blue;
+  &:not(:last-child) {
+    margin-right: 4rem;
   }
 }

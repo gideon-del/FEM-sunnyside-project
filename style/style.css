@@ -96,8 +96,20 @@ ul {
   right: 0;
   height: 10px;
   width: 100%;
-  background-color: rgba(250, 212, 0, 0.5);
+  background-color: rgba(250, 212, 0, 0.2);
   border-radius: 100px;
+  transition: background-color 0.2s ease-in;
+}
+.text-box__link:hover::after {
+  background-color: #fad400;
+}
+
+.pink::after {
+  background-color: rgba(254, 120, 103, 0.2);
+}
+
+.pink:hover::after {
+  background-color: #fe7867;
 }
 
 .client-header {
@@ -123,20 +135,50 @@ h4 span {
   color: hsl(212deg, 27%, 19%);
 }
 
+.footer__nav a {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  color: hsl(167deg, 40%, 24%);
+}
+.footer__nav a:not(:last-child) {
+  margin-right: 4rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__nav {
+  margin-block: 2rem 5rem;
+}
+.footer__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 }
 
 .grid-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, minmax(30rem, 60.1rem));
+  overflow: hidden;
 }
 .grid-section .text-box {
-  padding: 15rem;
+  padding-inline: 9rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  .grid-section .text-box {
+    padding: 0 2rem;
+  }
 }
 .grid-section .img-box img {
   width: 100%;
@@ -144,18 +186,19 @@ h4 span {
 }
 .grid-section .graphic-img,
 .grid-section .photography-img {
-  height: 100%;
+  height: 54rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding-inline: 18rem;
+  padding-inline: 9rem;
   padding-block-end: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .grid-section .graphic-img {
   background-image: url("../../images/desktop/image-graphic-design.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 .grid-section .graphic-img .parag,
 .grid-section .graphic-img .header-tetiary {
@@ -163,6 +206,7 @@ h4 span {
 }
 .grid-section .photography-img {
   background-image: url("../../images/desktop/image-photography.jpg");
+  padding-inline: 10rem;
 }
 .grid-section .photography-img .parag,
 .grid-section .photography-img .header-tetiary {
@@ -201,7 +245,7 @@ h4 span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 39%;
+  top: 43%;
 }
 .header .down-img {
   display: flex;
@@ -246,6 +290,7 @@ h4 span {
 }
 .gallery .img img {
   width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -263,6 +308,11 @@ h4 span {
 
 .testimonial-section {
   padding: 15rem 12rem;
+}
+
+.footer {
+  padding: 5rem 4rem;
+  background-color: hsl(168deg, 34%, 41%);
 }
 
 /*# sourceMappingURL=style.css.map */
