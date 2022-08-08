@@ -5,6 +5,9 @@
   font-family: "Barlow", serif;
   // font-weight: $f-600;
   color: $c-white;
+  @include respond(phone) {
+    color: $c-vd-grayish-blue;
+  }
 }
 .header-primary {
   color: $c-white;
@@ -12,9 +15,19 @@
   margin-bottom: 6rem;
   font-family: "Fraunces", serif;
   font-weight: $f-900;
-  font-size: clamp(6rem, 2rem, 4rem);
+  font-size: 6rem;
   letter-spacing: 1rem;
   white-space: nowrap;
+  text-align: center;
+  @include respond(tab-port) {
+    font-size: 4rem;
+    letter-spacing: 0.7rem;
+  }
+  @include respond(phone) {
+    font-size: 4rem;
+    letter-spacing: 0.4rem;
+    white-space: break-spaces;
+  }
 }
 .header-secondary {
   font-family: "Fraunces", serif;
@@ -98,5 +111,10 @@ h4 {
   color: $c-dark-desaturated-blue;
   &:not(:last-child) {
     margin-right: 4rem;
+  }
+}
+@include respond(phone) {
+  .text-box__container {
+    text-align: center;
   }
 }

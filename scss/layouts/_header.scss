@@ -12,6 +12,12 @@
         display: flex;
         gap: 2rem;
         align-items: center;
+        @include respond(phone) {
+          flex-direction: column;
+          padding: 1rem 2rem;
+          background-color: $c-white;
+          color: $c-vd-grayish-blue;
+        }
       }
       &__list {
         &:last-child {
@@ -21,6 +27,14 @@
           .nav__link {
             color: $c-vd-desaturated-blue;
           }
+        }
+      }
+      @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        label {
+          align-self: flex-end;
+          margin-bottom:1rem;
         }
       }
     }

@@ -12,6 +12,12 @@
 }
 .testimonial-section {
   padding: 15rem 12rem;
+  @include respond(tab-port) {
+    padding: 6rem 2rem;
+  }
+  @include respond(phone) {
+    padding: 4rem 11rem;
+  }
 }
 .footer {
   padding: 5rem 4rem;

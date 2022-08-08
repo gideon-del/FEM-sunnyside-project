@@ -3,6 +3,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
+  @include respond(phone) {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    .transfer {
+      grid-row: 1/2;
+    }
+  }
   .text-box {
     padding-inline: 9rem;
     display: flex;
