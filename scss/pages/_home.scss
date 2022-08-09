@@ -1,11 +1,14 @@
 @use "../abstracts" as *;
 .header {
-  height: 80vh;
+  min-height: 80vh;
   background-image: url("../../images/desktop/image-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
+  @include respond(phone) {
+    background-image: url("../../images/mobile/image-header.jpg");
+  }
 }
 .grid-section {
   width: 100%;
@@ -16,7 +19,7 @@
     padding: 6rem 2rem;
   }
   @include respond(phone) {
-    padding: 4rem 11rem;
+    padding: 4rem 2rem;
   }
 }
 .footer {

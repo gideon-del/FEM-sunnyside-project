@@ -74,12 +74,25 @@
 
         <div class="img-box transfer">
           <img
+            srcset="
+              ./images/mobile/image-transform.jpg  750w,
+              ./images/desktop/image-transform.jpg 720w
+            "
+            sizes="(max-width:600px) 750px, 720px"
             src="./images/desktop/image-transform.jpg"
             alt="Transformed image"
           />
         </div>
         <div class="img-box">
-          <img src="./images/desktop/image-stand-out.jpg" alt="" />
+          <img
+            srcset="
+              ./images/mobile/image-stand-out.jpg  750w,
+              ./images/desktop/image-stand-out.jpg 720w
+            "
+            sizes="(max-width:600px) 750px, 720px"
+            src="./images/desktop/image-stand-out.jpg"
+            alt=""
+          />
         </div>
         <div class="text-box">
           <div class="text-box__container">
@@ -154,16 +167,48 @@
       </section>
       <section class="gallery">
         <div class="img1 img">
-          <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="" />
+          <img
+            srcset="
+              ./images/desktop/image-gallery-milkbottles.jpg 720w,
+              ./images/mobile/image-gallery-milkbottles.jpg  376w
+            "
+            sizes="(min-width: 601px) 720px, 376px"
+            src="./images/mobile/image-gallery-milkbottles.jpg"
+            alt="Milkbottles"
+          />
         </div>
         <div class="img2 img">
-          <img src="./images/desktop/image-gallery-orange.jpg" alt="" />
+          <img
+            srcset="
+              ./images/desktop/image-gallery-orange.jpg 720w,
+              ./images/mobile/image-gallery-orange.jpg  376w
+            "
+            sizes="(max-width: 600px) 376px, 720px"
+            src="./images/desktop/image-gallery-orange.jpg"
+            alt="Orange"
+          />
         </div>
         <div class="img3 img">
-          <img src="./images/desktop/image-gallery-cone.jpg" alt="" />
+          <img
+            srcset="
+              ./images/desktop/image-gallery-cone.jpg 720w,
+              ./images/mobile/image-gallery-cone.jpg  376w
+            "
+            sizes="(max-width: 600px) 376px, 720px"
+            src="./images/desktop/image-gallery-cone.jpg"
+            alt=""
+          />
         </div>
         <div class="img4 img">
-          <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="" />
+          <img
+            srcset="
+              ./images/desktop/image-gallery-sugarcubes.jpg 720w,
+              ./images/mobile/image-gallery-sugarcubes.jpg  376w
+            "
+            sizes="(max-width: 600px) 376px, 720px"
+            src="./images/desktop/image-gallery-sugarcubes.jpg"
+            alt=""
+          />
         </div>
       </section>
     </main>

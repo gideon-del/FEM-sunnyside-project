@@ -143,6 +143,11 @@ li {
   text-transform: uppercase;
   letter-spacing: 10px;
 }
+@media screen and (max-width: 600px) {
+  .client-header {
+    font-size: 1rem;
+  }
+}
 
 h4 {
   font-family: "Barlow", sans-serif;
@@ -237,6 +242,11 @@ h4 span {
 .grid-section .graphic-img {
   background-image: url("../../images/desktop/image-graphic-design.jpg");
 }
+@media screen and (max-width: 600px) {
+  .grid-section .graphic-img {
+    background-image: url("../../images/mobile/image-graphic-design.jpg");
+  }
+}
 .grid-section .graphic-img .parag,
 .grid-section .graphic-img .header-tetiary {
   color: hsl(167deg, 40%, 24%);
@@ -244,6 +254,11 @@ h4 span {
 .grid-section .photography-img {
   background-image: url("../../images/desktop/image-photography.jpg");
   padding-inline: 10rem;
+}
+@media screen and (max-width: 600px) {
+  .grid-section .photography-img {
+    background-image: url("../../images/mobile/image-photography.jpg");
+  }
 }
 .grid-section .photography-img .parag,
 .grid-section .photography-img .header-tetiary {
@@ -260,6 +275,13 @@ h4 span {
   margin-inline: auto;
   width: min(100%, 114rem);
 }
+.header__container .nav {
+  position: absolute;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 .header__container .nav__items {
   display: flex;
   gap: 2rem;
@@ -267,42 +289,68 @@ h4 span {
 }
 @media screen and (max-width: 600px) {
   .header__container .nav__items {
+    opacity: 0;
+    position: sticky;
+    right: 2rem;
     flex-direction: column;
-    padding: 1rem 2rem;
+    padding: 2.5rem 2rem;
     background-color: hsl(0deg, 0%, 100%);
     color: hsl(213deg, 9%, 39%);
+    clip-path: polygon(87% 8%, 100% 2%, 100% 100%, 0 100%, 0 8%);
+    -webkit-clip-path: polygon(87% 8%, 100% 2%, 100% 100%, 0 100%, 0 8%);
+  }
+  .header__container .nav__items .nav__list {
+    margin-inline: 2rem;
+  }
+  .header__container .nav__items .nav__list:first-child {
+    margin-top: 2rem;
   }
 }
-.header__container .nav__list:last-child {
+.header__container .nav__items__list:last-child {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 200px;
   padding: 1rem 2rem;
 }
-.header__container .nav__list:last-child .nav__link {
+@media screen and (max-width: 600px) {
+  .header__container .nav__items__list:last-child {
+    background-color: hsl(51deg, 100%, 49%);
+  }
+}
+.header__container .nav__items__list:last-child .nav__link {
   color: hsl(212deg, 27%, 19%);
 }
+.header__container .nav__items label {
+  display: none;
+}
 @media screen and (max-width: 600px) {
-  .header__container .nav {
+  .header__container .nav__items label {
+    display: block;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header__container .nav__items {
     display: flex;
     flex-direction: column;
   }
-  .header__container .nav label {
-    align-self: flex-end;
-    margin-bottom: 1rem;
-  }
 }
-.header__container .logo {
+.header__container .nav .logo {
   display: flex;
   align-items: center;
 }
-.header .down {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 43%;
+@media screen and (max-width: 600px) {
+  .header__container .nav .logo {
+    align-items: flex-start;
+  }
 }
-.header .down-img {
+@media screen and (max-width: 600px) {
+  .header .nav input:checked ~ .nav__items {
+    opacity: 1;
+  }
+}
+.header .down .down-img {
   display: flex;
   justify-content: center;
 }
@@ -338,6 +386,11 @@ h4 span {
   margin-bottom: 6rem;
   white-space: nowrap;
 }
+@media screen and (max-width: 600px) {
+  .client-header {
+    margin-bottom: 0;
+  }
+}
 
 .gallery {
   display: flex;
@@ -364,12 +417,17 @@ h4 span {
 }
 
 .header {
-  height: 80vh;
+  min-height: 80vh;
   background-image: url("../../images/desktop/image-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .header {
+    background-image: url("../../images/mobile/image-header.jpg");
+  }
 }
 
 .grid-section {
@@ -386,7 +444,7 @@ h4 span {
 }
 @media screen and (max-width: 600px) {
   .testimonial-section {
-    padding: 4rem 11rem;
+    padding: 4rem 2rem;
   }
 }
 

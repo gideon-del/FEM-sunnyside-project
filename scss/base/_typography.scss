@@ -91,6 +91,9 @@
   font-weight: $f-900;
   text-transform: uppercase;
   letter-spacing: 10px;
+  @include respond(phone) {
+    font-size: 1rem;
+  }
 }
 h4 {
   font-family: "Barlow", sans-serif;

@@ -8,45 +8,75 @@
     margin-inline: auto;
     width: min(100%, 114rem);
     .nav {
+      position: absolute;
+      right: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
       &__items {
         display: flex;
         gap: 2rem;
         align-items: center;
         @include respond(phone) {
+          opacity: 0;
+          position: sticky;
+          right: 2rem;
           flex-direction: column;
-          padding: 1rem 2rem;
+          padding: 2.5rem 2rem;
           background-color: $c-white;
           color: $c-vd-grayish-blue;
-        }
-      }
-      &__list {
-        &:last-child {
-          background-color: $c-white;
-          border-radius: 200px;
-          padding: 1rem 2rem;
-          .nav__link {
-            color: $c-vd-desaturated-blue;
+          clip-path: polygon(87% 8%, 100% 2%, 100% 100%, 0 100%, 0 8%);
+          -webkit-clip-path: polygon(87% 8%, 100% 2%, 100% 100%, 0 100%, 0 8%);
+          .nav__list {
+            margin-inline: 2rem;
+            &:first-child {
+              margin-top: 2rem;
+            }
           }
         }
-      }
-      @include respond(phone) {
-        display: flex;
-        flex-direction: column;
+        &__list {
+          &:last-child {
+            background-color: $c-white;
+            border-radius: 200px;
+            padding: 1rem 2rem;
+            @include respond(phone) {
+              background-color: $c-yellow;
+            }
+            .nav__link {
+              color: $c-vd-desaturated-blue;
+            }
+          }
+        }
         label {
-          align-self: flex-end;
-          margin-bottom:1rem;
+          display: none;
+          @include respond(phone) {
+            display: block;
+            align-self: flex-end;
+            margin-bottom: 1rem;
+            width: 100%;
+          }
+        }
+        @include respond(phone) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        @include respond(phone) {
+          align-items: flex-start;
         }
       }
     }
-    .logo {
-      display: flex;
-      align-items: center;
+  }
+  @include respond(phone) {
+    .nav input:checked ~ .nav__items {
+      opacity: 1;
     }
   }
   .down {
-    @include centerEl();
-    top: 43%;
-    &-img {
+    & .down-img {
       display: flex;
       justify-content: center;
     }

@@ -27,6 +27,9 @@
 .client-header {
   margin-bottom: 6rem;
   white-space: nowrap;
+  @include respond(phone) {
+    margin-bottom: 0;
+  }
 }
 .gallery {
   display: flex;
