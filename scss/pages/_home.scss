@@ -8,6 +8,7 @@
   width: 100%;
   @include respond(phone) {
     background-image: url("../../images/mobile/image-header.jpg");
+    min-height: 100vh;
   }
 }
 .grid-section {

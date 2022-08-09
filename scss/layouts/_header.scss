@@ -8,11 +8,14 @@
     margin-inline: auto;
     width: min(100%, 114rem);
     .nav {
-      position: absolute;
-      right: 10%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      @include respond(phone) {
+        position: absolute;
+        right: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 80%;
+      }
       &__items {
         display: flex;
         gap: 2rem;
@@ -27,6 +30,9 @@
           color: $c-vd-grayish-blue;
           clip-path: polygon(87% 8%, 100% 2%, 100% 100%, 0 100%, 0 8%);
           -webkit-clip-path: polygon(87% 8%, 100% 2%, 100% 100%, 0 100%, 0 8%);
+          width: 90%;
+          margin-inline: auto;
+
           .nav__list {
             margin-inline: 2rem;
             &:first-child {
@@ -39,9 +45,7 @@
             background-color: $c-white;
             border-radius: 200px;
             padding: 1rem 2rem;
-            @include respond(phone) {
-              background-color: $c-yellow;
-            }
+
             .nav__link {
               color: $c-vd-desaturated-blue;
             }
@@ -50,10 +54,6 @@
         label {
           display: none;
           @include respond(phone) {
-            display: block;
-            align-self: flex-end;
-            margin-bottom: 1rem;
-            width: 100%;
           }
         }
         @include respond(phone) {
@@ -80,5 +80,31 @@
       display: flex;
       justify-content: center;
     }
+  }
+}
+@include respond(phone) {
+  .btn {
+    background-color: $c-yellow;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-family: "Fraunces", sans-serif;
+  }
+}
+.down {
+  @include respond(phone) {
+    margin-top: 4rem;
+  }
+}
+label {
+  display: none;
+  @include respond(phone) {
+    display: block;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    width: 100%;
   }
 }

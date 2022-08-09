@@ -42,6 +42,7 @@
     background-image: url("../../images/desktop/image-graphic-design.jpg");
     @include respond(phone) {
       background-image: url("../../images/mobile/image-graphic-design.jpg");
+      padding-inline: 2rem;
     }
 
     .parag,
@@ -53,6 +54,7 @@
     background-image: url("../../images/desktop/image-photography.jpg");
     @include respond(phone) {
       background-image: url("../../images/mobile/image-photography.jpg");
+      padding-inline: 5rem;
     }
     padding-inline: 10rem;
     .parag,
