@@ -82,7 +82,7 @@ li {
   display: inline-block;
   margin-block: 1.5rem;
   word-wrap: break-word;
-  font-weight: 600;
+  font-weight: 900;
   white-space: break-spaces;
 }
 
@@ -234,7 +234,7 @@ h4 span {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding-inline: 9rem;
+  padding-inline: 19rem;
   padding-block-end: 2rem;
   background-size: cover;
   background-repeat: no-repeat;
@@ -255,7 +255,7 @@ h4 span {
 }
 .grid-section .photography-img {
   background-image: url("../../images/desktop/image-photography.jpg");
-  padding-inline: 10rem;
+  padding-inline: 20rem;
 }
 @media screen and (max-width: 600px) {
   .grid-section .photography-img {
@@ -276,7 +276,8 @@ h4 span {
   display: flex;
   justify-content: space-between;
   margin-inline: auto;
-  width: min(100%, 114rem);
+  margin-block: 2rem 11rem;
+  width: min(100%, 130rem);
 }
 @media screen and (max-width: 600px) {
   .header__container .nav {
@@ -313,14 +314,6 @@ h4 span {
   .header__container .nav__items .nav__list:first-child {
     margin-top: 2rem;
   }
-}
-.header__container .nav__items__list:last-child {
-  background-color: hsl(0deg, 0%, 100%);
-  border-radius: 200px;
-  padding: 1rem 2rem;
-}
-.header__container .nav__items__list:last-child .nav__link {
-  color: hsl(212deg, 27%, 19%);
 }
 .header__container .nav__items label {
   display: none;
@@ -378,6 +371,15 @@ label {
     margin-bottom: 1rem;
     width: 100%;
   }
+}
+
+.btn {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 200px;
+  padding: 1rem 2rem;
+}
+.btn .nav__link {
+  color: hsl(212deg, 27%, 19%);
 }
 
 .flex {

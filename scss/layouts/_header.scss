@@ -6,7 +6,8 @@
     display: flex;
     justify-content: space-between;
     margin-inline: auto;
-    width: min(100%, 114rem);
+    margin-block: 2rem 11rem;
+    width: min(100%, 130rem);
     .nav {
       @include respond(phone) {
         position: absolute;
@@ -40,17 +41,7 @@
             }
           }
         }
-        &__list {
-          &:last-child {
-            background-color: $c-white;
-            border-radius: 200px;
-            padding: 1rem 2rem;
 
-            .nav__link {
-              color: $c-vd-desaturated-blue;
-            }
-          }
-        }
         label {
           display: none;
           @include respond(phone) {
@@ -106,5 +97,14 @@ label {
     justify-content: flex-end;
     margin-bottom: 1rem;
     width: 100%;
+  }
+}
+.btn {
+  background-color: $c-white;
+  border-radius: 200px;
+  padding: 1rem 2rem;
+
+  .nav__link {
+    color: $c-vd-desaturated-blue;
   }
 }
